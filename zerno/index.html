@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копчикова Анастасия - Профессиональное представительство на форуме "Зерно России"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #4caf50;
+            --accent-color: #ff9800;
+            --dark-color: #1b5e20;
+            --light-color: #e8f5e9;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 16px 32px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e68900;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+        
+        .btn-telegram {
+            background-color: #0088cc;
+        }
+        
+        .btn-telegram:hover {
+            background-color: #0077b5;
+        }
+        
+        .btn-email {
+            background-color: #ea4335;
+        }
+        
+        .btn-email:hover {
+            background-color: #d33c2f;
+        }
+        
+        .btn-phone {
+            background-color: #34b7f1;
+        }
+        
+        .btn-phone:hover {
+            background-color: #2aa1d8;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero .btn {
+            margin: 0 10px 20px;
+        }
+        
+        /* О предложении */
+        .offer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .offer-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .offer-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Примеры задач */
+        .tasks {
+            background-color: var(--light-color);
+        }
+        
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .task-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        /* Рабочий пакет */
+        .package-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 30px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+            padding: 25px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Стоимость */
+        .pricing {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+        
+        /* Контакты */
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 50px auto 0;
+            max-width: 900px;
+        }
+        
+        .contact-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon.telegram {
+            color: #0088cc;
+        }
+        
+        .contact-icon.whatsapp {
+            color: #25D366;
+        }
+        
+        .contact-icon.email {
+            color: #ea4335;
+        }
+        
+        .contact-icon.phone {
+            color: #34b7f1;
+        }
+        
+        .contact-text {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--light-text);
+        }
+        
+        .questions-list {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ddd;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.9rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .pricing, .contact-buttons {
+                padding: 25px;
+            }
+            
+            .hero .btn {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                min-width: 100%;
+            }
+            
+            .contact-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Копчикова Анастасия</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">О предложении</a></li>
+                    <li><a href="#tasks">Задачи для производителей</a></li>
+                    <li><a href="#package">Рабочий пакет</a></li>
+                    <li><a href="#pricing">Стоимость</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <h1>Профессиональное представительство на X Международном форуме «Зерно России — 2026»</h1>
+            <p>Получите максимум пользы от главного зернового форума года в Сочи, минимизировав затраты на командировки и время ключевых сотрудников.</p>
+            <a href="#contact" class="btn">Связаться сейчас</a>
+            <a href="#package" class="btn btn-accent">Узнать подробности</a>
+        </div>
+    </section>
+
+    <!-- О предложении -->
+    <section id="about">
+        <div class="container">
+            <h2>Суть предложения</h2>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 30px;">Я беру на себя роль вашего профессионального представителя на площадке форума «Зерно России — 2026» (19-20 февраля, Сочи). Моя задача — не просто присутствовать, а целенаправленно работать для достижения ваших бизнес-целей.</p>
+            
+            <div class="offer-content">
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Поиск контрагентов</h3>
+                    <p>Целевой нетворкинг: поиск и установление контактов с нужными вам компаниями, трейдерами, представителями госорганов.</p>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Анализ рынка</h3>
+                    <p>Участие в ключевых сессиях по вашим темам, мониторинг новинок техники и технологий, анализ трендов и изменений в регулировании.</p>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Детальный отчёт</h3>
+                    <p>Структурированный документ с контактами, итогами бесед, анализом трендов и конкретными рекомендациями для вашей компании.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Задачи для производителей -->
+    <section id="tasks" class="tasks">
+        <div class="container">
+            <h2>Фокус на интересах производителей</h2>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 30px;">Готова сфокусироваться на темах, наиболее актуальных для региональных производителей зерна.</p>
+            
+            <div class="task-grid">
+                <div class="task-item">
+                    <h3>Поиск каналов сбыта</h3>
+                    <p>Установление связей с федеральными трейдинговыми компаниями, экспортёрами, переработчиками.</p>
+                </div>
+                
+                <div class="task-item">
+                    <h3>Оптимизация логистики</h3>
+                    <p>Переговоры с железнодорожными и морскими перевозчиками о тарифах и условиях из Северо-Западного региона.</p>
+                </div>
+                
+                <div class="task-item">
+                    <h3>Повышение маржинальности</h3>
+                    <p>Анализ нишевых и маржинальных культур, изучение опыта их возделывания у других холдингов.</p>
+                </div>
+                
+                <div class="task-item">
+                    <h3>Работа с госсистемами</h3>
+                    <p>Получение актуальной информации и разъяснений по работе с ФГИС «Зерно» и другими цифровыми платформами.</p>
+                </div>
+                
+                <div class="task-item">
+                    <h3>Снижение рисков</h3>
+                    <p>Изучение инструментов биржевой торговли и агрострахования.</p>
+                </div>
+                
+                <div class="task-item">
+                    <h3>Анализ технологий</h3>
+                    <p>Сбор информации по конкретным технологиям хранения, транспортировки и переработки зерна.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Рабочий пакет -->
+    <section id="package">
+        <div class="container">
+            <h2>Рабочий пакет услуг</h2>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 30px;">Комплексный подход к достижению ваших бизнес-целей на форуме.</p>
+            
+            <div class="package-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Приоритизация и стратегия</h3>
+                    <p>Совместно определяем ключевые цели участия (например, «найти экспортёра в Египет», «изучить новинки техники для хранения»).</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Активная работа на площадке</h3>
+                    <p>Участие в сессиях, целевой нетворкинг, сбор коммерческих предложений, прайс-листов, мониторинг новинок.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Детальный отчёт</h3>
+                    <p>Предоставление структурированного документа с контактами, анализом трендов и конкретными рекомендациями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стоимость -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Стоимость и порядок работы</h2>
+            
+            <div class="pricing">
+                <h3>Индивидуальный подход</h3>
+                <p>Стоимость пакета услуг обсуждается индивидуально, исходя из объёма и сложности поставленных задач. Формируется как фиксированный гонорар за проект.</p>
+                
+                <div style="margin: 30px 0;">
+                    <h4>Алгоритм работы:</h4>
+                    <ol style="text-align: left; padding-left: 20px;">
+                        <li>Обсуждение целей и подписание агентского договора.</li>
+                        <li>Аванс 50%.</li>
+                        <li>Активная работа на форуме (ежедневные краткие брифинги при необходимости).</li>
+                        <li>Предоставление итогового отчёта.</li>
+                        <li>Оплата оставшихся 50%.</li>
+                    </ol>
+                </div>
+                
+                <a href="#contact" class="btn">Обсудить стоимость</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты для обсуждения деталей</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Готова обсудить ваши задачи и адаптировать предложение. Для оперативного старта работы прошу ответить на ключевые вопросы.</p>
+            
+            <div class="questions-list">
+                <p><strong>Ключевые вопросы для обсуждения:</strong></p>
+                <ol>
+                    <li>Какие 2-3 самые важные цели для вашей компании на этом форуме?</li>
+                    <li>Есть ли конкретные компании-«мишени», контакт с которыми вы хотели бы установить?</li>
+                    <li>Интересует ли вас исключительно разовое представительство на этом форуме или возможны варианты долгосрочного сотрудничества?</li>
+                </ol>
+            </div>
+            
+            <div class="contact-buttons">
+                <div class="contact-card">
+                    <div class="contact-icon telegram">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p class="contact-text">Быстрое общение, удобно для оперативных вопросов и обсуждения деталей</p>
+                    <a href="https://t.me/anastasiya_developer" target="_blank" class="btn btn-telegram">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p class="contact-text">Прямое общение, можно отправлять файлы и документы</p>
+                    <a href="https://wa.me/79001234567" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-text">Для официальных предложений и подробных обсуждений</p>
+                    <a href="mailto:n.kopchikova@example.com" class="btn btn-email">
+                        <i class="fas fa-envelope"></i> Отправить Email
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon phone">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p class="contact-text">Прямой звонок для срочных вопросов и консультаций</p>
+                    <a href="tel:+79001234567" class="btn btn-phone">
+                        <i class="fas fa-phone-alt"></i> Позвонить
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <h3>Копчикова Анастасия</h3>
+                <p>Независимый эксперт в сфере агропромышленного комплекса и регионального развития</p>
+                <div style="margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:n.kopchikova@example.com">n.kopchikova@example.com</a></p>
+                    <p><i class="fas fa-phone"></i> Телефон: <a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+                    <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/anastasiya_developer" target="_blank">@anastasiya_developer</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Копчикова Анастасия</h3>
+                    <p>Независимый эксперт в сфере агропромышленного комплекса и регионального развития. Профессиональное представительство интересов на международных отраслевых форумах.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/anastasiya_developer" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/79001234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="mailto:n.kopchikova@example.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <a href="#about">Профессиональное представительство</a>
+                    <a href="#tasks">Решение задач производителей</a>
+                    <a href="#package">Рабочий пакет услуг</a>
+                    <a href="#pricing">Стоимость и порядок работы</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Представительство в ЮФО и СЗФО</p>
+                    <p><i class="fas fa-envelope"></i> n.kopchikova@example.com</p>
+                    <p><i class="fas fa-phone"></i> +7 (900) 123-45-67</p>
+                    <p><i class="fab fa-telegram"></i> Telegram: @anastasiya_developer</p>
+                    <p><i class="far fa-calendar-alt"></i> Форум: 19-20 февраля 2026, Сочи</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Копчикова Анастасия. Профессиональное представительство на X Международном форуме «Зерно России — 2026».</p>
+                <p>Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Добавление тени при прокрутке для шапки
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Сообщение при наведении на WhatsApp (для демонстрации)
+        document.querySelectorAll('.btn-whatsapp').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // В реальном сайте это будет обычная ссылка
+                console.log('WhatsApp: измените номер телефона в ссылке на ваш реальный');
+            });
+        });
+        
+        // Инструкция для пользователя
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log(`
+                ============================================
+                ИНСТРУКЦИЯ ПО НАСТРОЙКЕ КОНТАКТОВ:
+                ============================================
+                
+                1. WhatsApp: замените номер в ссылке (строка 414)
+                   href="https://wa.me/79001234567" → href="https://wa.me/ВАШ_НОМЕР"
+                   
+                2. Телефон: замените номер в ссылках (строки 435, 464, 515)
+                   href="tel:+79001234567" → href="tel:+ВАШ_НОМЕР"
+                   
+                3. Email: замените email во всех местах (строки 428, 462, 516)
+                   n.kopchikova@example.com → ВАШ_EMAIL
+                   
+                4. Telegram: ссылка уже ведет на @anastasiya_developer
+                   Если нужно изменить, поменяйте в строке 405
+                   
+                ВСЕ ССЫЛКИ РАБОТАЮТ ПРИ КЛИКЕ!
+                ============================================
+            `);
+        });
+    </script>
+</body>
+</html>

@@ -1,13 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- Фавикон СЮДА - самый приоритетный -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Фавикон -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
     <title>Представительство на «Зерно России 2026» | Найду клиентов в Сочи | Копчикова Анастасия</title>
     <meta name="description" content="Представительство вашей компании на форуме «Зерно России 2026» в Сочи. Найду партнеров, клиентов, поставщиков. Экономия 150+ тыс. рублей.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Open Graph метатеги -->
+    <meta property="og:title" content="Представительство на «Зерно России 2026» | Найду клиентов в Сочи | Копчикова Анастасия">
+    <meta property="og:description" content="Представительство вашей компании на форуме «Зерно России 2026» в Сочи. Найду партнеров, клиентов, поставщиков. Экономия 150+ тыс. рублей.">
+    <meta property="og:image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
+    <meta property="og:url" content="https://anastasiya-developer.ru/zerno/z.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Представительство на форуме «Зерно России 2026»">
+    <meta property="vk:image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
+    <meta itemprop="image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
+    
     <style>
         :root {
             --primary: #2e7d32;
@@ -157,10 +169,8 @@
         
         /* Hero */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url(''image/profile1.jpg'');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+            background-color: #1b5e20; /* Запасной цвет */
             color: white;
             text-align: center;
             padding: 100px 0;
@@ -317,6 +327,10 @@
             color: white;
         }
         
+        .results-section h2:after {
+            background: var(--accent);
+        }
+        
         .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -438,12 +452,12 @@
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
         
         .faq-answer.active {
             padding: 20px;
-            max-height: 500px;
+            max-height: 1000px;
         }
         
         /* Contact */
@@ -463,6 +477,13 @@
             margin-bottom: 30px;
         }
         
+        /* Исправления для изображений */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -476,41 +497,59 @@
                 padding: 60px 0;
             }
             
+            .hero {
+                padding: 60px 0;
+            }
+            
             .hero-cta {
                 flex-direction: column;
+                align-items: center;
             }
             
             .hero-cta .btn {
                 width: 100%;
                 max-width: 300px;
-                margin: 0 auto 10px;
             }
             
             .footer-profile {
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .about-content {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+            
+            .btn-cta {
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
         }
     </style>
-     <!-- ЭТОТ БЛОК ДЛЯ СОЦСЕТЕЙ -->
-    <!-- Open Graph для Facebook, ВК, Telegram и др. -->
-    <meta property="og:title" content="Представительство на «Зерно России 2026» | Найду клиентов в Сочи | Копчикова Анастасия
-">
-    <meta property="og:description" content="
-Представительство вашей компании на форуме «Зерно России 2026» в Сочи. Найду партнеров, клиентов, поставщиков. Экономия 150+ тыс. рублей.">
-    <meta property="og:image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
-    <meta property="og:url" content="https://anastasiya-developer.ru/zerno/z.html/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Представительство вашей компании на форуме «Зерно России 2026» в Сочи">
-    
-    <!-- Для ВК дополнительно -->
-    <meta property="vk:image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
-    
-    
-    <!-- Дополнительно для WhatsApp, Telegram -->
-    <meta itemprop="image" content="https://anastasiya-developer.ru/zerno/image/profile1.jpg">
-    <meta name="description" content="Представительство вашей компании на форуме «Зерно России 2026» в Сочи. Найду партнеров, клиентов, поставщиков. Экономия 150+ тыс. рублей">
-</head>
 </head>
 <body>
     <!-- 1. HERO - Привлечение внимания -->
@@ -877,8 +916,22 @@
             const answer = document.getElementById('faq' + num);
             const icon = answer.previousElementSibling.querySelector('.fa-chevron-down');
             
+            // Закрыть все остальные FAQ
+            document.querySelectorAll('.faq-answer').forEach((item) => {
+                if (item.id !== 'faq' + num) {
+                    item.classList.remove('active');
+                    const otherIcon = item.previousElementSibling.querySelector('i');
+                    if (otherIcon) {
+                        otherIcon.classList.remove('fa-chevron-up');
+                        otherIcon.classList.add('fa-chevron-down');
+                    }
+                }
+            });
+            
+            // Переключить текущий FAQ
             answer.classList.toggle('active');
             
+            // Изменить иконку
             if (answer.classList.contains('active')) {
                 icon.classList.remove('fa-chevron-down');
                 icon.classList.add('fa-chevron-up');
@@ -979,19 +1032,23 @@
                 };
             });
         });
+        
+        // Инициализация при загрузке
+        updateCounter();
     </script>
+    
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106314467', 'ym');
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106314467', 'ym');
 
-    ym(106314467, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/106314467" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+        ym(106314467, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106314467" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>
